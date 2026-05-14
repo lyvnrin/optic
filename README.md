@@ -10,7 +10,7 @@ A growing collection of computer vision scripts built with OpenCV and MediaPipe.
 
 ## setup
 
-Each script is standalone. Install the common dependencies and run directly.
+Each script is standalone, so install the common dependencies and run directly.
 
 ```bash
 pip install opencv-python mediapipe numpy
