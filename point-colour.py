@@ -41,7 +41,14 @@ def dist_to_colour(d, max_dist):
     return tuple(int(x) for x in bgr[0][0])
 
 cap = cv2.VideoCapture(0)
-print("Point both index fingers and move them apart to change the mood - press Q to quit")
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
+print("Point up with one finger - press Q to quit")
+
+cv2.namedWindow("point-colour", cv2.WINDOW_NORMAL)
+cv2.setWindowProperty("point-colour", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
 
 MAX_DIST = 600
 current_colour = (255, 255, 255)

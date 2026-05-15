@@ -43,7 +43,13 @@ def draw_emoji(frame, emoji, x, y):
     return cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)
 
 cap = cv2.VideoCapture(0)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
 print("Point up with one finger - press Q to quit")
+
+cv2.namedWindow("nerd-point", cv2.WINDOW_NORMAL)
+cv2.setWindowProperty("nerd-point", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 while True:
     ret, frame = cap.read()

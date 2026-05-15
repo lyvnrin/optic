@@ -32,7 +32,11 @@ def is_pointing(hand):
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
-print("Point both index fingers to draw a line - press Q to quit")
+
+print("Point up with one finger - press Q to quit")
+
+cv2.namedWindow("point-size", cv2.WINDOW_NORMAL)
+cv2.setWindowProperty("point-size", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 while True:
     ret, frame = cap.read()
@@ -69,7 +73,7 @@ while True:
         cv2.putText(frame, "point both index fingers", (30, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (200, 200, 200), 2)
 
-    cv2.imshow("", frame)
+    cv2.imshow("point-size", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
