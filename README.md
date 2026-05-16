@@ -1,6 +1,6 @@
 # optic
 
-A growing collection of computer vision scripts built with OpenCV and MediaPipe. Each one is a self-contained experiment - gesture detection, live filters, tracking, whatever seemed interesting that week.
+A growing collection of computer vision scripts built with OpenCV and MediaPipe. Each one is a self-contained experiment: gesture detection, live filters, tracking, whatever seemed interesting that week.
 
 ## scripts
 
